@@ -39,15 +39,3 @@
     
 // })
 
-const bcrypt=require('bcrypt');
-const saltrounds=10;
-bcrypt.genSalt(saltrounds,function(err,salt){
-    bcrypt.hash('john',salt,function(err,hash){
-        console.log(hash);
-        bcrypt.compare('johny',hash,function(err,result){
-            console.log(result);
-            
-        })
-        
-    })
-})
